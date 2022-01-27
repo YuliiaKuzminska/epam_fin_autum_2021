@@ -60,6 +60,9 @@ target/
 # dotenv
 .env
 
+# IDE
+.idea
+
 # virtualenv
 venv/
 ENV/
