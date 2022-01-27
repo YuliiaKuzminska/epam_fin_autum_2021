@@ -1,0 +1,17 @@
+#branches:
+# - master
+
+language: python
+python:
+  - "3.9"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - pylint department_app
+  - coverage run runner_test.py
+  - coverage report
+
+after_success:
+  - coveralls

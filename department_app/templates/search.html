@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Search Employees
+{% endblock %}
+
+{% block content %}
+  <main>
+    <div class="container">
+      <h1 class="page-title">
+        Search Employees
+      </h1>
+      <form method="POST" class="form-search-employees">
+        {{ form.csrf_token }}
+        {{ form.date_from.label() }}
+        {{ form.date_from(class="form-control", placeholder="Birthdate from") }}
+        {{ form.date_to.label() }}
+        {{ form.date_to(class="form-control", placeholder="Birthdate to") }}
+
+        {{ form.submit(class="btn btn-primary mb-3") }}
+    </form>
+    </div>
+  </main>
+{% endblock %}
